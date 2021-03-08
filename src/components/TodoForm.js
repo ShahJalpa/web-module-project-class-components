@@ -22,6 +22,10 @@ export default class TodoForm extends React.Component{
         this.setState({newTask: ""});
     }
 
+    handleClear = (event) => {
+        event.preventDefault();
+        this.props.clearTask();
+    }
     render(){
         return(
             <form onSubmit={this.handleAddButton}>
@@ -38,7 +42,7 @@ export default class TodoForm extends React.Component{
                 <div className="buttons">
                     <br /> 
                     <button>Add</button>
-                    <button>Clear</button>
+                    <button onClick={this.handleClear}>Clear</button>
                 </div>
             </form>
         )

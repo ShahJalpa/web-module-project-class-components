@@ -38,9 +38,21 @@ class App extends React.Component {
     this.setState({
       toDoTaskData: [...this.state.toDoTaskData, {
         task: newTodoTask,
-        taskDone: false
+        taskDone: false,
+        id: new Date()
       }]
     })
+  }
+
+  clearTask = () => {
+    this.setState({
+      toDoTaskData: this.state.toDoTaskData.filter((item) => {
+        return(
+          !item.taskDone
+        )
+      })
+    })
+    console.log(this.toDoTaskData)
   }
 
   toggleList = (todoTaskId) => {
@@ -63,7 +75,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Todo List</h2>
-        <TodoForm addTodo={this.addTodo}/>
+        <TodoForm addTodo={this.addTodo} clearTask={this.clearTask}/>
         <TodoList toggleList={this.toggleList} list={this.state.toDoTaskData}/>
       </div>
     );
