@@ -42,12 +42,29 @@ class App extends React.Component {
       }]
     })
   }
+
+  toggleList = (todoTaskId) => {
+    const newTaskList = this.state.toDoTaskData.map((item) =>{
+      if(item.id === todoTaskId){
+        return{
+          ...item,
+          taskDone: !item.taskDone,
+        }
+      }else{
+        return item;
+      }
+    })
+    console.log(newTaskList);
+    this.setState({
+      toDoTaskData: newTaskList,
+    })
+  }
   render() {
     return (
       <div>
         <h2>Todo List</h2>
         <TodoForm addTodo={this.addTodo}/>
-        <TodoList />
+        <TodoList toggleList={this.toggleList} list={this.state.toDoTaskData}/>
       </div>
     );
   }
