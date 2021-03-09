@@ -7,9 +7,11 @@ export default class Todo extends React.Component{
     
     render(){
         return(
-            <div onClick={this.buttonClick} 
-            className={this.props.item.taskDone ? "taskDone" : ""}>
-                <p>{this.props.item.task}</p>
+            <div className="todo"> 
+                <div onClick={this.buttonClick} 
+                     className={this.props.item.taskDone ? "taskDone" : ""}>
+                     <p>{this.props.item.task}</p>
+            </div>
             </div>
         )
     }

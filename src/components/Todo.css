@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    margin: 10% 40%;
+    padding: 15px 50px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(247, 116, 116);
+    background-color: rgb(31, 27, 27);
+}
+
+h2{ /*app title */
+    margin: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    color: rgba(253, 17, 17, 0.924);
+}
+
+.taskDone{
+    text-decoration: line-through;
+    color: rgb(251, 251, 251);
+}
+
+.todo p{
+    width:100%;
+    margin: 7px 0;
+    padding: 5px;
+    color: rgb(251, 251, 251);
+    font-size: 15px;
+    border-bottom: 1.5px solid rgb(90, 89, 89);
+}
+
+.todo p:hover{
+    color: rgba(253, 17, 17, 0.924);
+}
+
+form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+label{
+    font-size: 17px;
+    color: rgb(251, 251, 251);
+}
+
+input{
+    border: 2px solid rgb(247, 116, 116);
+    border-radius: 5px;
+    padding: 7px;
+}
+
+button{
+    margin: 0px 5px;
+    padding: 7px 23px;
+    border: 2px solid rgb(247, 116, 116);
+    border-radius: 5px;
+}
+

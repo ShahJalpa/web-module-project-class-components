@@ -30,7 +30,7 @@ export default class TodoForm extends React.Component{
         return(
             <form onSubmit={this.handleAddButton}>
                 <div className="inputbox">
-                    <label>Add your todo task here! <br /><br /></label>
+                    <label>Add your todo task below! <br /><br /></label>
                     
                     <input type="text" 
                            name="newItem" 
